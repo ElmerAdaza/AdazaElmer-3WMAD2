@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5f5e5a;
+            color: #302f2f;
+        }
+        header {
+            background-color: #3C3633;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        nav ul li a:hover{
+            color: #FF4141;         
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 15px 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .map-container {
+            grid-column: 1 / span 2;
+        }
+        .map {
+            width: 100%;
+            height: 300px;
+            background-color: #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            background-color: #D8D9DA;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            font-size: .8em;
+            padding: 20px;
+        }
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+        .icon img {
+            margin-right: 10px;
+            width: 2em;
+            padding: 5px;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container form {
+            background-color: #D8D9DA;
+            padding: 20px; 
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-container form input[type="text"],
+        .form-container form input[type="email"],
+        .form-container form textarea {
+            width: calc(100% - 28px); 
+            padding: 10px;
+            margin: 5px 0; 
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        .form-container form input[type="text"]:focus,
+        .form-container form input[type="email"]:focus,
+        .form-container form textarea:focus {
+            border-color: #333;
+        }
+        .form-container form input[type="submit"] {
+            background-color: #FF4141;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-container form input[type="submit"]:hover {
+            background-color: #5B8FB9;
+        }
+
+        /* Media Query Para sa Phone Screens */
+        @media only screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .map-container {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" style="color: #FF4141;">Contact Me</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="#projects">Recent Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="contact" class="container">
+        <div class="contact-info">
+            <div class="icon">
+                <img src="img/telephone.png" alt="Phone Icon">
+                <p>09123456789</p>
+            </div>
+            <div class="icon">
+                <img src="img/address.png" alt="Email Icon">
+                <p>elmeradaza98@gmail.com</p>
+            </div>
+            <div class="icon">
+                <img src="img/location.png" alt="Address Icon">
+                <p>Bry. San Francisco, San Pablo City, Laguna</p>
+            </div>
+        </div>
+        <div class="form-container">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+        <div class="map-container">
+            <div class="map">
+                <!-- Your map embed code or iframe goes here -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1935.1647648503324!2d121.33310881786339!3d14.057708170665064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd436bb807cd59%3A0x15690692edd4899c!2sBrgy.%20San%20Francisco%20Calihan%20San%20Pablo%20City%2C%20Laguna!5e0!3m2!1sen!2sph!4v1707574343673!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
